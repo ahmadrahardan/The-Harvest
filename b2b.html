@@ -7,164 +7,175 @@
     <link rel="stylesheet" href="b2b.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-left">
-                <a href="index.html" class="logo-box">
-                    <img src="image/Logo-Harvest-White.png" alt="">
-                </a>
-                <nav>
-                    <ul class="main-menu">
-                        <li><a href="#">MENU</a></li>
-                        <li><a href="#">STORES</a></li>
-                        <li><a href="treats.html">TREATS</a></li>
-                        <li><a href="#">B2B</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="header-right">
-                <div class="nav-actions">
-                    <button class="cart-btn">
-                        <span>CART</span>
-                        <i class="fas fa-shopping-cart"></i>
-                    </button>
-                    <button class="login-btn">
-                        LOGIN/SIGN UP
-                    </button>
+            <a class="logo-box" href="index.html">
+                <img src="image/Logo-Harvest-White.png" alt="">
+            </a>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="#">MENU</a></li>
+                    <li><a href="#">STORES</a></li>
+                    <li><a href="treats.html">TREATS</a></li>
+                    <li><a href="b2b.html">B2B</a></li>
+                </ul>
+                <div class="header-right">
+                    <div class="nav-actions">
+                        <button class="cart-btn">
+                            <span>CART</span>
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button class="login-btn">
+                            LOGIN/SIGN UP
+                        </button>
+                    </div>
+                    <div class="location-search">
+                        <span>Location</span>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <i class="fas fa-search"></i>
+                    </div>
                 </div>
-                <div class="location-search">
-                    <span>Location</span>
-                    <i class="fas fa-map-marker-alt"></i>
-                    <i class="fas fa-search"></i>
-                </div>
-            </div>
+            </nav>
+        </div>
+            <button class="hamburger" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
     <main>
-        <section class="img-slider">
-            <img src="image/b2b.png" alt="Promo 1" class="slide">
-        </section>
-        <section class="logo-slider-section">
-            <button class="logo-slider-btn prev"><i class="fas fa-chevron-left"></i></button>
-            <div class="logo-slider-track-wrap">
-                <div class="logo-slider-track">
-                    <div class="logo-item">
-                        <img src="image/logo-ut.png" alt="United Tractors">
-                    </div>
-                    <div class="logo-item">
-                        <img src="image/logo-cakekinian.png" alt="Cakekinian">
-                    </div>
-                    <div class="logo-item">
-                        <img src="image/logo-tm.png" alt="TM">
-                    </div>
-                    <div class="logo-item">
-                        <img src="image/logo-ipot.png" alt="Ipot">
-                    </div>
-                    <div class="logo-item">
-                        <img src="image/logo-howi.png" alt="Howi">
-                    </div>
-                    <div class="logo-item">
-                        <img src="image/logo-mandiri.png" alt="Howi">
-                    </div>
-                </div>
-            </div>
-            <button class="logo-slider-btn next"><i class="fas fa-chevron-right"></i></button>
-        </section>
-        <section class="advantage-section">
-            <h2 class="advantage-title">
-                Advantages<br>
-                Collaborating with Us
-            </h2>
-            <p class="advantage-desc">
-                Furthermore a splendid taste of our products, you can get this satisfaction from us:
-            </p>
-            <div class="advantage-main">
-                <div class="advantage-img-wrap">
-                    <img src="image/Wanderbites.png" alt="Advantages" />
-                </div>
-                <div class="advantage-list">
-                    <div class="advantage-item">
-                        <i class="fas fa-utensils"></i>
-                        <div>
-                            <h4>Customized Products</h4>
-                            <p>
-                                We offer white-label products that specific to your needs. Other than that, co-branding opportunity is another initiative to collaborate. You can get an exclusive product to present to your business relation
-                            </p>
+        <div class="container-main">
+            <section class="img-slider">
+                <img src="image/b2b.png" alt="Promo 1" class="slide">
+            </section>
+            <section class="logo-slider-section">
+                <button class="logo-slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="logo-slider-track-wrap">
+                    <div class="logo-slider-track">
+                        <div class="logo-item">
+                            <img src="image/logo-ut.png" alt="United Tractors">
                         </div>
-                    </div>
-                    <div class="advantage-item">
-                        <i class="fas fa-coins"></i>
-                        <div>
-                            <h4>Meet Your Budget</h4>
-                            <p>
-                                Build fabulous products at your budgets and still provide high-quality products to fit your business needs. We can recommend the right products to grow your business as well
-                            </p>
+                        <div class="logo-item">
+                            <img src="image/logo-cakekinian.png" alt="Cakekinian">
                         </div>
-                    </div>
-                    <div class="advantage-item">
-                        <i class="fas fa-th"></i>
-                        <div>
-                            <h4>Wide Range Products</h4>
-                            <p>
-                                We produce a variety of product formats from frozen to ready to eat, such as cake, bread, hampers, and many more. We also provide healthy choice products like gluten free or less sugar
-                            </p>
+                        <div class="logo-item">
+                            <img src="image/logo-mandiri.png" alt="Mandiri">
                         </div>
-                    </div>
-                    <div class="advantage-item">
-                        <i class="fas fa-file-alt"></i>
-                        <div>
-                            <h4>ISO Certified</h4>
-                            <p>
-                                Obtained ISO 22000:2018, an international recognized standard which includes certification for Good Manufacturing Practice (GMP) and HACCP for the assurance of food safety at all levels. Audited and certified by SAI Global
-                            </p>
+                        <div class="logo-item">
+                            <img src="image/logo-tm.png" alt="TM">
                         </div>
-                    </div>
-                    <div class="advantage-item">
-                        <img src="image/hlal.png" alt="Halal" style="width:40px;height:40px;object-fit:contain;">
-                        <div>
-                            <h4>Halal & Safety Commitment</h4>
-                            <p>
-                                Our products are certified by LPPOM MUI and BPOM
-                            </p>
+                        <div class="logo-item">
+                            <img src="image/logo-rc.png" alt="RC">
+                        </div>
+                        <div class="logo-item">
+                            <img src="image/logo-ipot.png" alt="Ipot">
+                        </div>
+                        <div class="logo-item">
+                            <img src="image/logo-howi.png" alt="Howi">
+                        </div>
+                        <div class="logo-item">
+                            <img src="image/logo-BTN.png" alt="BTN">
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="contact-collab-section">
-            <div class="collab-img-wrap">
-                <img src="image/phone.png" alt="Collaboration" />
-            </div>
-            <div class="collab-contact-right">
-                <h2>
-                Catch us at your fingertips<br>
-                through the button below and<br>
-                let's collaborate!
+                <button class="logo-slider-btn next"><i class="fas fa-chevron-right"></i></button>
+            </section>
+            <section class="advantage-section">
+                <h2 class="advantage-title">
+                    Advantages<br>
+                    Collaborating with Us
                 </h2>
-            </div>
-            <div class="collab-cont">
-                <div class="collab-btn-row">
-                    <a class="collab-btn" href="" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>
-                            <span class="label">WHATSAPP</span>
-                            <span class="main">+62 811 8600 656</span>
-                        </span>
-                    </a>
-                    <a class="collab-btn" href="mailto:b2b@harvestcakes.com">
-                        <i class="fas fa-envelope"></i>
-                        <span>
-                            <span class="label">EMAIL</span>
-                            <span class="main">b2b@harvestcakes.com</span>
-                        </span>
-                    </a>
+                <p class="advantage-desc">
+                    Furthermore a splendid taste of our products, you can get this satisfaction from us:
+                </p>
+                <div class="advantage-main">
+                    <div class="advantage-img-wrap">
+                        <img src="image/Wanderbites.png" alt="Advantages" />
+                    </div>
+                    <div class="advantage-list">
+                        <div class="advantage-item">
+                            <i class="fas fa-utensils"></i>
+                            <div>
+                                <h4>Customized Products</h4>
+                                <p>
+                                    We offer white-label products that specific to your needs. Other than that, co-branding opportunity is another initiative to collaborate. You can get an exclusive product to present to your business relation
+                                </p>
+                            </div>
+                        </div>
+                        <div class="advantage-item">
+                            <i class="fas fa-coins"></i>
+                            <div>
+                                <h4>Meet Your Budget</h4>
+                                <p>
+                                    Build fabulous products at your budgets and still provide high-quality products to fit your business needs. We can recommend the right products to grow your business as well
+                                </p>
+                            </div>
+                        </div>
+                        <div class="advantage-item">
+                            <i class="fas fa-th"></i>
+                            <div>
+                                <h4>Wide Range Products</h4>
+                                <p>
+                                    We produce a variety of product formats from frozen to ready to eat, such as cake, bread, hampers, and many more. We also provide healthy choice products like gluten free or less sugar
+                                </p>
+                            </div>
+                        </div>
+                        <div class="advantage-item">
+                            <i class="fas fa-file-alt"></i>
+                            <div>
+                                <h4>ISO Certified</h4>
+                                <p>
+                                    Obtained ISO 22000:2018, an international recognized standard which includes certification for Good Manufacturing Practice (GMP) and HACCP for the assurance of food safety at all levels. Audited and certified by SAI Global
+                                </p>
+                            </div>
+                        </div>
+                        <div class="advantage-item">
+                            <img src="image/hlal.png" alt="Halal" style="width:40px;height:40px;object-fit:contain;">
+                            <div>
+                                <h4>Halal & Safety Commitment</h4>
+                                <p>
+                                    Our products are certified by LPPOM MUI and BPOM
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>        
+            </section>
+            <section class="contact-collab-section">
+                <div class="collab-img-wrap">
+                    <img src="image/phone.png" alt="Collaboration" />
+                </div>
+                <div class="collab-content-right">
+                    <h2>
+                        Catch us at your fingertips<br>
+                        through the button below and<br>
+                        let's collaborate!
+                    </h2>
+                    <div class="collab-btn-row">
+                        <a class="collab-btn" href="#" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>
+                                <span class="label">WHATSAPP</span>
+                                <span class="main">+62 811 8600 656</span>
+                            </span>
+                        </a>
+                        <a class="collab-btn" href="mailto:b2b@harvestcakes.com">
+                            <i class="fas fa-envelope"></i>
+                            <span>
+                                <span class="label">EMAIL</span>
+                                <span class="main">b2b@harvestcakes.com</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>                     
+        </div>
     </main>
     <footer class="footer">
         <div class="footer-col footer-brand">

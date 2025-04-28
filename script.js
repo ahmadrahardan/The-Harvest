@@ -1,14 +1,17 @@
-$(document).ready(function() {
+// Image Slider
+document.addEventListener('DOMContentLoaded', function() {
     let currentSlide = 0;
-    const slides = $('.slide');
-    const dots = $('.dot');
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
     const totalSlides = slides.length;
+    const sliderWrapper = document.querySelector('.slider-wrapper');
     let sliderInterval = setInterval(nextSlide, 3000);
 
     function updateSlider() {
-        $('.slider-wrapper').css('transform', `translateX(-${currentSlide * 100}%)`);
-        dots.removeClass('active');
-        dots.eq(currentSlide).addClass('active');
+        sliderWrapper.style.transition = 'transform 0.7s cubic-bezier(.77,0,.18,1)';
+        sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+        dots.forEach(dot => dot.classList.remove('active'));
+        if (dots[currentSlide]) dots[currentSlide].classList.add('active');
     }
 
     function nextSlide() {
@@ -21,67 +24,84 @@ $(document).ready(function() {
         updateSlider();
     }
 
-    dots.each(function(idx) {
-        $(this).on('click', function() {
+    dots.forEach((dot, idx) => {
+        dot.addEventListener('click', function() {
             goToSlide(idx);
             resetInterval();
         });
     });
 
-    $('.img-slider').hover(
-        function() { clearInterval(sliderInterval); },
-        function() { sliderInterval = setInterval(nextSlide, 3000); }
-    );
+    const imgSlider = document.querySelector('.img-slider');
+    if (imgSlider) {
+        imgSlider.addEventListener('mouseenter', function() {
+            clearInterval(sliderInterval);
+        });
+        imgSlider.addEventListener('mouseleave', function() {
+            sliderInterval = setInterval(nextSlide, 3000);
+        });
+    }
 
     function resetInterval() {
         clearInterval(sliderInterval);
         sliderInterval = setInterval(nextSlide, 3000);
     }
 
-    // Inisialisasi posisi awal
     updateSlider();
 });
 
-
-
-
-
-
-
-let logoIndex = 0;
-const logosVisible = 3; // berapa logo tampil dalam viewport (desktop)
-const $track = $('.logo-slider-track');
-const $items = $('.logo-item');
-const total = $items.length;
-
-function updateSlider() {
-    const itemWidth = $items[0].offsetWidth + 48; // 48px gap
-    let maxIdx = total - logosVisible;
-    if (logoIndex < 0) logoIndex = 0;
-    if (logoIndex > maxIdx) logoIndex = maxIdx;
-    $track.css('transform', `translateX(${-logoIndex * itemWidth}px)`);
-}
-
-// Tombol prev/next
-$('.logo-slider-btn.prev').click(function() {
-    logoIndex--;
-    updateSlider();
-});
-$('.logo-slider-btn.next').click(function() {
-    logoIndex++;
-    updateSlider();
+// Hamburger
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger-btn');
+    const nav = document.querySelector('.header-left nav');
+    hamburger.addEventListener('click', function (e) {
+        e.stopPropagation(); 
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+    });
+    document.addEventListener('click', function (e) {
+        if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+            hamburger.classList.remove('active');
+            nav.classList.remove('active');
+        }
+    });
 });
 
-// Responsive logo count
-function adjustVisible() {
-    if (window.innerWidth <= 900) {
-        logosVisible = 2;
-    } else {
-        logosVisible = 3;
+// Logo Slider
+document.addEventListener("DOMContentLoaded", function () {
+    const track = document.querySelector('.logo-slider-track');
+    const wrap = document.querySelector('.logo-slider-track-wrap');
+    const btnPrev = document.querySelector('.logo-slider-btn.prev');
+    const btnNext = document.querySelector('.logo-slider-btn.next');
+
+    let currentTranslate = 0;
+    const itemWidth = 160 + 39; 
+    const totalItems = track.children.length;
+
+    function getMaxTranslate() {
+        const totalWidth = itemWidth * totalItems;
+        const visibleWidth = wrap.offsetWidth;
+        if (totalWidth <= visibleWidth) return 0;
+        return visibleWidth - totalWidth;
     }
-    updateSlider();
-}
-$(window).on('resize', adjustVisible);
-$(document).ready(function() {
-    adjustVisible();
+
+    btnNext.addEventListener('click', function () {
+        const maxTranslate = getMaxTranslate();
+        if (currentTranslate - itemWidth < maxTranslate) {
+            currentTranslate = maxTranslate;
+        } else {
+            currentTranslate -= itemWidth;
+        }
+        track.style.transform = `translateX(${currentTranslate}px)`;
+    });
+
+    btnPrev.addEventListener('click', function () {
+        currentTranslate += itemWidth;
+        if (currentTranslate > 0) currentTranslate = 0;
+        track.style.transform = `translateX(${currentTranslate}px)`;
+    });
+
+    window.addEventListener('resize', () => {
+        currentTranslate = 0;
+        track.style.transform = `translateX(0px)`;
+    });
 });

@@ -266,6 +266,7 @@ body {
         max-height: 130px;
     }
 }
+
 @media (max-width: 700px) {
     .product-flex {
         gap: 12px;
@@ -284,7 +285,7 @@ body {
 
 .treats-section {
     max-width: 1480px;
-    margin: 36px auto;
+    margin: 36px auto 100px auto;
     padding: 0 90px;
     box-sizing: border-box;
 }

@@ -16,14 +16,14 @@ body {
     display: flex;
     gap: 32px;
     align-items: flex-start;
-    justify-content: center; /* DARI flex-start JADI CENTER */
+    justify-content: center;
 }
 
 .treats-reward-flex {
     display: flex;
     flex-wrap: wrap;
     gap: 28px 24px;
-    justify-content: center; /* PASTIKAN CENTER */
+    justify-content: center;
     flex: 1 1 0;
 }
 
