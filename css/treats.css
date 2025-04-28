@@ -176,7 +176,7 @@ body {
     }
     .treats-login-card {
         min-width: 0;
-        max-width: 70vw;
+        max-width: 60vw;
         width: 100%;
         margin: 0 auto 24px auto;
     }
@@ -185,8 +185,8 @@ body {
         justify-content: center;
     }
     .reward-card {
-        width: 98vw;
-        max-width: 380px;
+        width: 90vw;
+        max-width: 350px;
         margin: 0 auto 12px auto;
     }
 }

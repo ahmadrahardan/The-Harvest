@@ -328,6 +328,10 @@ body {
     .advantage-img-wrap { min-width: 0; }
     .advantage-item h4 { font-size: 1.14rem; }
     .advantage-item p { font-size: 0.98rem; }
+    .contact-collab-section {
+        margin: 30px auto 0 auto;
+        padding: 0 0 0 0;
+    }
     .collab-content-right h2 { font-size: 1.2rem;} 
     .collab-btn { min-width: 80vw; padding: 12px 8px; }
     .collab-btn-row { min-width: flex; flex-direction: column; }
